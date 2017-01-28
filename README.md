@@ -1,4 +1,4 @@
-# GPrSG_2
+# GPrSG-2
 木更津高専情報工学科2年 プログラミング演習I 冬期休業課題  
 Processingを用いたゲーム作り  
 
@@ -20,3 +20,14 @@ Processingを用いたゲーム作り
 
 敵機の上から重ねて表示してある数値は搭載している爆弾の数. 撃墜する優先順位をつける時等の参考に.  
 敵のウェーブは8秒毎にやってくる.弾薬補給等はこの隙に.
+
+#### English
+GPrSG-2 is a shooting game created as submission in programming classes.
+
+There are two turrets with a 20mm machine cannon and you can control them to defend the HQ from enemy bombers.  
+Use your mouse to aim, and click to fire.
+
+If you can not destroy enemy bombers, the durability of the HQ will decrease and in the end it will be game over.
+
+As the remaining ammos are limited, you must purchase these when they become less or empty.  
+There are 500 ammo packs sold for ¥500 and you can buy it by pressing the button on the upper left of the window.
