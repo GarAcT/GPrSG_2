@@ -1,5 +1,4 @@
 boolean mouseStat,defeat;
-PImage map;
 Turret turret0,turret1;
 ArrayList<Aircraft> enemyList = new ArrayList<Aircraft>();
 ArrayList<Shell> shellList = new ArrayList<Shell>();
@@ -15,7 +14,6 @@ void setup(){
   fill(0);
   rectMode(RADIUS);
   textSize(12);
-  map = loadImage("map.png");
   turret0 = new Turret(0);
   turret1 = new Turret(1);
   landLine = height - 50;
@@ -31,8 +29,10 @@ void setup(){
 }
 
 void draw(){
-  background(map);
+  background(0);
+  line(0,landLine,width,landLine);
   line(0,menuLine,width,menuLine);
+  rect(50-1,landLine-25,50+1,25);
   rect(100,15,95,10);
   fill(255);
   text("ammo:"+ammo,5,height-5);
