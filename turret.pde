@@ -3,7 +3,7 @@ class Turret{
   int mode;
   int size;
   float lift;
-  float sentanX,sentanY;
+  float muzzleX,muzzleY;
   float spread;
   boolean firing;
   boolean power;
@@ -32,8 +32,8 @@ class Turret{
         lift += radians(random(-spread,spread));
       }
     }
-    sentanX = x + 60*cos(lift);
-    sentanY = y - 60*sin(lift);
+    muzzleX = x + 60*cos(lift);
+    muzzleY = y - 60*sin(lift);
     liftCannon(lift);
     rect(x,y,size,size);
     

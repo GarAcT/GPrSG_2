@@ -1,5 +1,5 @@
 boolean mouseStat,defeat;
-Turret turret0,turret1;
+Turret t0,t1;
 ArrayList<Aircraft> enemyList = new ArrayList<Aircraft>();
 ArrayList<Shell> shellList = new ArrayList<Shell>();
 int landLine,menuLine;
@@ -14,8 +14,8 @@ void setup(){
   fill(0);
   rectMode(RADIUS);
   textSize(12);
-  turret0 = new Turret(0);
-  turret1 = new Turret(1);
+  t0 = new Turret(0);
+  t1 = new Turret(1);
   landLine = height - 50;
   menuLine = 30;
   ammo = 2500;
@@ -65,7 +65,7 @@ void draw(){
       if(enemy.destroyed){
         money += enemy.money;
       }else{
-        HQ -= enemy.bomb*2 + 1;
+        HQ -= enemy.load*2 + 1;
       }
       enemyList.remove(i);
     }
@@ -82,17 +82,17 @@ void draw(){
     fill(0);
   }
   
-  turret0.update();
-  turret1.update();
+  t0.update();
+  t1.update();
   
   if(mouseStat){
-    if(turret0.power && ammo>0){
-      Shell shell = new Shell(turret0.sentanX,turret0.sentanY,turret0.lift);
+    if(t0.power && ammo>0){
+      Shell shell = new Shell(t0.muzzleX,t0.muzzleY,t0.lift);
       shellList.add(shell);
       ammo--;
     }
-    if(turret1.power && ammo>0){
-      Shell shell = new Shell(turret1.sentanX,turret1.sentanY,turret1.lift);
+    if(t1.power && ammo>0){
+      Shell shell = new Shell(t1.muzzleX,t1.muzzleY,t1.lift);
       shellList.add(shell);
       ammo--;
     }

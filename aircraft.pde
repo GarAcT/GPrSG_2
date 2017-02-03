@@ -1,28 +1,26 @@
 class Aircraft{
-  int bomb;
+  int load;
   int HP;
   float x,y;
   float v;
-  float pitch;
   float size;
   float money;
   boolean destroyed;
   
-  Aircraft(int load){
+  Aircraft(int bomb){
     x=width + random(100);
     y=random(100,300);
     v=random(1.5,2.0);
-    pitch = 0;
     size = 30 + random(-5,5);
-    bomb = load;
+    load = bomb;
     HP = (int)(size*2);
-    money = HP+bomb*2;
+    money = HP+load*2;
   }
   
   void update(){
     rect(x,y,size,size/3);
     fill(255);
-    text(bomb,x,y);
+    text(load,x,y);
     fill(0);
     x -= v;
   }
