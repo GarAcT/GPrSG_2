@@ -63,7 +63,7 @@ void draw(){
     enemy.update();
     if(enemy.needRemove()){
       if(enemy.destroyed){
-        money += enemy.money;
+        money += enemy.money + wave;
       }else{
         HQ -= enemy.load*2 + 1;
       }
